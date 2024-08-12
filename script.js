@@ -21,11 +21,11 @@ window.addEventListener("load", function () {
   let copilotName = document.querySelector("input[name=copilotName]");
   let fuelLevel = document.querySelector("input[name=fuelLevel]");
   let cargoMass = document.querySelector("input[name=cargoMass]");
+
   let list = document.getElementById("faultyItems");
 
   // Validation
   form.addEventListener("submit", function (event) {
-    console.log("Its working!");
     let emptyConditionArray = [];
     let invalidTypeConditionArray = [];
     emptyConditionArray.push(
@@ -48,8 +48,15 @@ window.addEventListener("load", function () {
       alert("Enter a valid value for each field!");
       event.preventDefault();
     } else {
-      list.style.visibility = "visible";
       event.preventDefault();
+      formSubmission(
+        document,
+        list,
+        pilotName.value,
+        copilotName.value,
+        fuelLevel.value,
+        cargoMass.value
+      );
     }
   });
 });
