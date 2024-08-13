@@ -1,5 +1,3 @@
-// Write your helper functions here!
-
 require("cross-fetch/polyfill");
 
 function addDestinationInfo(
@@ -11,7 +9,6 @@ function addDestinationInfo(
   moons,
   imageUrl
 ) {
-  // Here is the HTML formatting for our mission target div.
   let missionTarget = document.getElementById("missionTarget");
   missionTarget.innerHTML = `
                  <h2>Mission Destination</h2>
