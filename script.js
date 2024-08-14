@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
   listedPlanetsResponse
     .then(function (result) {
       listedPlanets = result;
-      console.log(listedPlanets);
     })
     .then(function () {
       planetSelection = pickPlanet(listedPlanets);
